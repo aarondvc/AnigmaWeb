@@ -1,4 +1,4 @@
-import { Code } from "lucide-react";
+import { Briefcase, Code, FolderDown, User } from "lucide-react";
 
 export const AboutSection = () => {
  return (
@@ -25,8 +25,11 @@ export const AboutSection = () => {
                      <a href="#contact" className="cosmic-button">
                         Get In Touch
                      </a>
-                     <a href="#contact" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300">
-                        View My Resume
+                     <a href="/assets/resume.pdf" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 flex items-center gap-2">
+                        Download Resume <FolderDown/>
                      </a>
                   </div>
             </div>
@@ -36,19 +39,25 @@ export const AboutSection = () => {
                      <div className="p-3 rounded-full bg-primary/10 text-primary">
                         <Code className="w-6 h-6 text-primary" />
                      </div>
-                  </div>
-               </div>
-               <div className="gradient-border p-6 card-hover">
-                  <div className="flex items-start gap-4">
-                     <div className="p-3 rounded-full bg-primary/10 text-primary">
-                        <Code className="w-6 h-6 text-primary" />
+                     <div className="text-left">
+                        <h4 className="text-semibold text-lg"> Web Development </h4>
+                        <p className="text-muted-foreground">
+                           Skilled in building responsive and dynamic websites using modern technologies like React, Node.js, and more.
+                        </p>
                      </div>
                   </div>
                </div>
                <div className="gradient-border p-6 card-hover">
                   <div className="flex items-start gap-4">
                      <div className="p-3 rounded-full bg-primary/10 text-primary">
-                        <Code className="w-6 h-6 text-primary" />
+                        <User className="w-6 h-6 text-primary" />
+                     </div>
+                  </div>
+               </div>
+               <div className="gradient-border p-6 card-hover">
+                  <div className="flex items-start gap-4">
+                     <div className="p-3 rounded-full bg-primary/10 text-primary">
+                        <Briefcase className="w-6 h-6 text-primary" />
                      </div>
                   </div>
                </div>
