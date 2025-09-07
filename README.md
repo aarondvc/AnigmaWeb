@@ -34,5 +34,7 @@ Additional tweaks, animations (meteors, stars), and sections were customized and
 📬 Contact
 
 If you'd like to connect or discuss work, feel free to reach out!
+
 📧 Email: aarondverde@gmail.com
+
 🔗 LinkedIn: linkedin.com/in/aaron-verde
