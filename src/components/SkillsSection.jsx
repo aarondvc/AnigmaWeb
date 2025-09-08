@@ -1,6 +1,10 @@
 const skills = [
    //Frontend
    {name: 'HTML', level: 95, category: 'frontend'},
+   {name: 'CSS', level: 90, category: 'frontend'},
+   {name: 'JavaScript', level: 85, category: 'frontend'},
+   {name: 'React', level: 80, category: 'frontend'},
+   {name: 'Tailwind CSS', level: 75, category: 'frontend'},
 
    //Backend
    {name: 'Node.js', level: 85, category: 'backend'},
@@ -34,6 +38,16 @@ export const SkillsSection = () => {
          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {skills.map((skill, key) => (
                <div key={key} className="bg-card p-6 rounded-lg shadow-xs card-hover">
+                  <div className="text-left">
+                     <h3 className="font-semibold text-lg"> {skill.name}</h3>
+                  </div>
+                  <div className="w-full bg-secondary/50 rounded-full h-2 overflow-hidden mt-2">
+                     <div className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease_out"
+                        style={{ width: `${skill.level}%` }}/>
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                     <span>{skill.level}%</span>
+                  </div>
                </div>
             ))}
          </div>
