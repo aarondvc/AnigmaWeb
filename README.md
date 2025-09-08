@@ -1,12 +1,40 @@
-# React + Vite
+# 🚀 Anigma Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal **portfolio website** built with **React, Tailwind CSS, and Vite**.  
+It serves as a hub to showcase my projects, skills, and professional background, while also acting as a creative space to experiment with modern frontend design.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎨 Modern, responsive UI with TailwindCSS  
+- 🌌 Animated starry + meteor background for a dynamic effect  
+- 📂 Sections for **Home, About, Projects, Skills, and Contact**  
+- 📄 Resume download button (opens PDF in a new tab)  
+- 📱 Mobile-friendly navigation with collapsible menu  
+- ⚡ Fast and lightweight build powered by Vite  
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 18** – Component-based UI  
+- **TailwindCSS** – Utility-first styling  
+- **Vite** – Next-gen frontend tooling for super-fast dev builds  
+- **Lucide Icons** – For icons such as the download button  
+
+🙏 Credits & Inspiration
+
+This project was inspired and adapted from open-source resources and tutorials that provided a strong starting point and creative ideas:
+
+Beautiful React Tailwind Portfolio
+ – base structure and design inspiration.
+
+Machadop1407’s (PedroTech) YouTube Tutorial
+ – walkthrough that guided parts of the setup and UI implementation.
+
+Additional tweaks, animations (meteors, stars), and sections were customized and extended by me.
+
+📬 Contact
+
+If you'd like to connect or discuss work, feel free to reach out!
+
+📧 Email: aarondverde@gmail.com
+
+🔗 LinkedIn: linkedin.com/in/aaron-verde
