@@ -40,7 +40,7 @@ export const AboutSection = () => {
                         <Code className="w-6 h-6 text-primary" />
                      </div>
                      <div className="text-left">
-                        <h4 className="text-semibold text-lg"> Web Development </h4>
+                        <h4 className="font-semibold text-lg"> Web Development </h4>
                         <p className="text-muted-foreground">
                            Skilled in building responsive and dynamic websites using modern technologies like React, Node.js, and more.
                         </p>
@@ -52,12 +52,24 @@ export const AboutSection = () => {
                      <div className="p-3 rounded-full bg-primary/10 text-primary">
                         <User className="w-6 h-6 text-primary" />
                      </div>
+                     <div className="text-left">
+                        <h4 className="font-semibold text-lg"> Content Creation </h4>
+                        <p className="text-muted-foreground">
+                           Experienced in video editing, blogging, and creating engaging content to share knowledge and connect with targetd audiences.
+                        </p>
+                     </div>
                   </div>
                </div>
                <div className="gradient-border p-6 card-hover">
                   <div className="flex items-start gap-4">
                      <div className="p-3 rounded-full bg-primary/10 text-primary">
                         <Briefcase className="w-6 h-6 text-primary" />
+                     </div>
+                     <div className="text-left">
+                        <h4 className="font-semibold text-lg"> Project Management </h4>
+                        <p className="text-muted-foreground">
+                           Experienced in leading projects from conception to completion, ensuring timely delivery and quality outcomes.
+                        </p>
                      </div>
                   </div>
                </div>
