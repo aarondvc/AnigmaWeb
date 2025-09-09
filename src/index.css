@@ -150,14 +150,27 @@
          hover:scale-105 active:scale-95;
 }
 
+/* Light mode space */
 @utility star {
-  @apply absolute rounded-full bg-white;
-  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
+  @apply absolute rounded-full bg-black;
+  box-shadow: 0 0 10px 2px rgba(255, 0, 0, 0.5);
 }
 
 @utility meteor {
-  @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
-  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+  @apply absolute bg-linear-to-r from-black via-red-600 to-transparent rounded-full;
+  box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.4)
+  animation-fill-mode: backwards;
+}
+
+/* Dark Mode Override */
+.dark .star {
+  @apply absolute rounded-full bg-white; 
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
+}
+
+.dark .meteor {
+  @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full; 
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3); 
   animation-fill-mode: backwards;
 }
 
