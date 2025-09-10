@@ -1,3 +1,5 @@
+import { ArrowRight, ExternalLink, Github } from "lucide-react";
+
 const projects = [
    {
       id: 1,
@@ -57,14 +59,40 @@ export const ProjectsSection = () => {
                      <div className="p-6">
                         <div className="flex flex-wrap gap-2 mb-4">
                            {project.tags.map((tag) => (
-                            <span className="px-2 py-1 text-xs font-medium rounded-full bg-secondary text-secondary-foreground"> 
-                              {tag} 
+                            <span className="px-2 py-1 text-xs font-medium rounded-full bg-secondary bg-primary/20 text-secondary-foreground"> 
+                           {tag} 
                             </span>
-                           ))};
+                           ))}
                         </div>
+                     
+                     <h3 className="text-xl font-semibold mb-1">
+                        {project.title}
+                     </h3>
+                     <p className="text-muted-foreground text-sm mb-4">
+                        {project.description}
+                     </p>
+                     <div className="flex justify-between items-center">
+                         <div className="flex space-x-3">
+                           <a href={project.demoLink} 
+                              className="text-foregrpund/80 hover:text-primary transition-colors duration-300" target="_blank" >
+                              <ExternalLink size={20}/>
+                           </a>
+                           <a href={project.githubUrl} 
+                              className="text-foregrpund/80 hover:text-primary transition-colors duration-300" target="_blank" >
+                              <Github size={20}/>
+                           </a>
+                         </div>
+                     </div>
                      </div>
                   </div>
-               ))};
+               ))}
+            </div>
+
+            <div className="text-center mt-12">
+               <a className="cosmic-button w-fit mx-auto flex items-center gap-2" href="https://github.com/aarondvc"
+               >
+                  View All Projects on Github <ArrowRight className="inline-block ml-2" size={16}/>
+               </a>
             </div>
          </div>
 
