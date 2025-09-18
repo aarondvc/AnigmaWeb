@@ -40,7 +40,7 @@ export const Navbar = () => {
         >
           <span className="relative z-10">
             <span className="text-2xl font-bold text-foreground">
-              AaronDaVinCi
+              AnigmaDev
             </span>
             Portfolio
           </span>

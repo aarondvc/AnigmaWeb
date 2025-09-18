@@ -16,7 +16,7 @@ export const AboutSection = () => {
                       My journey in software development began with a fascination for technology and a desire to build solutions that make a difference. Over the years, I have honed my skills in various programming languages and frameworks, allowing me to bring innovative ideas to life.
                   </p>
                   <p className="text-muted-foreground">
-                      Beyond coding, I am also a content creator, sharing my knowledge and experiences through blogs and tutorials. I believe in the power of community and continuous learning, and I strive to contribute positively to the tech world.
+                      Beyond coding, I am also a content creator, sharing my love for gaming and trying to dive into the world of social media. I believe in the power of community and continuous learning, and I strive to contribute positively to the tech landscape.
                   </p>
                   <p className="text-muted-foreground">
                       When I'm not coding or creating content, you can find me exploring new technologies, collaborating with fellow developers, or indulging in my hobbies like gaming and music.
@@ -40,9 +40,9 @@ export const AboutSection = () => {
                         <Code className="w-6 h-6 text-primary" />
                      </div>
                      <div className="text-left">
-                        <h4 className="font-semibold text-lg"> Web Development </h4>
+                        <h4 className="font-semibold text-lg"> Software Development </h4>
                         <p className="text-muted-foreground">
-                           Skilled in building responsive and dynamic websites using modern technologies like React, Node.js, and more.
+                           Skilled in building responsive and dynamic applications in both front-end and back-end development by using modern technologies and best practices.
                         </p>
                      </div>
                   </div>
@@ -55,7 +55,7 @@ export const AboutSection = () => {
                      <div className="text-left">
                         <h4 className="font-semibold text-lg"> Content Creation </h4>
                         <p className="text-muted-foreground">
-                           Experienced in video editing, blogging, and creating engaging content to share knowledge and connect with targetd audiences.
+                           Experienced in video editing, marketing, and creating engaging content to share entertainment and connect with targeted audiences.
                         </p>
                      </div>
                   </div>
@@ -68,7 +68,7 @@ export const AboutSection = () => {
                      <div className="text-left">
                         <h4 className="font-semibold text-lg"> Project Management </h4>
                         <p className="text-muted-foreground">
-                           Experienced in leading projects from conception to completion, ensuring timely delivery and quality outcomes.
+                           Experienced in leading projects from conception to completion, ensuring timely delivery and quality outcomes for client-catered orders.
                         </p>
                      </div>
                   </div>

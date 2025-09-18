@@ -8,7 +8,7 @@ export const HeroSection = () => {
                <span className="opacity-0 animate-fade-in-delay-2"> Welcome all, this is my portfolio website</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-               Hello, I am Aaron Verde. I am a software developer from the University of Georgia with a passion for creating immersive and engaging experiences. Explore my projects, skills, and journey in the world of software development.
+               My name is Aaron Verde. I am a software developer from the University of Georgia with a passion for creating immersive and engaging experiences. Explore my projects, skills, and journey in the world of software development.
             </p>
 
             <div className="pt-4 opacity-0 animate-fade-in-delay-4">
