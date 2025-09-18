@@ -10,9 +10,7 @@ import { ContactSection } from "../components/ContactSection";
 export const Home = () => {
   return (
     <div className="home">
-      {/* ThemeToggle */}
-      <ThemeToggle />
-
+      
       {/* Background Elements */}
       <StarBackground />
 

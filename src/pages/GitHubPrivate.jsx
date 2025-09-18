@@ -1,8 +1,17 @@
 export const GitHubPrivate = () => {
    return(
-      <div className="github-private">
-         <h1>404 - Page Not Found</h1>
-         <p>Sorry, the GitHub repository you are trying to access is private.</p>
-      </div>
+      <section className="h-screen flex flex-col items-center justify-center text-center">
+         <h1 className="text-4xl font-bold mb-4">🚫 Private Repository</h1>
+         <p className="text-muted-foreground mb-6">
+            Sorry, this project is currently private.  
+            Please contact me directly if you'd like to learn more.
+         </p>
+         <a
+            href="mailto:aarondverde@gmail.com"
+            className="cosmic-button"
+         >
+         Get In Touch
+         </a>
+      </section>
    );
 }

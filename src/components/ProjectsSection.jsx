@@ -18,7 +18,7 @@ const projects = [
       image: "path/to/image2.jpg",
       tags: ["Java", "Android Studio", "Mobile Dev", "Firebase"],
       demoLink: "#",
-      githubUrl: "#GitHubPrivate",
+      githubUrl: "/private-repo",
    },
    {
       id: 3,
