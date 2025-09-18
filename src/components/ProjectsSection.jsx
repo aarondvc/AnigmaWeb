@@ -1,23 +1,24 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 
+
 const projects = [
    {
       id: 1,
-      title: "Project One",
-      description: "Description for project one.",
+      title: "Cherry On Top",
+      description: "Cherry On Top was a semester-long team project focused on designing and implementing a tower defense game using Unity with C#. The game features cherries (enemy mobs) that traverse a fixed track, requiring players to strategically place and upgrade toppings (towers) to prevent the cherries from reaching the end.",
       image: "path/to/image1.jpg",
-      tags: ["React", "JavaScript"],
+      tags: ["Unity", "C#", "Game Dev"],
       demoLink: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/OwenOneHundred/CherryOnTop",
    },
    {
       id: 2,
-      title: "Project Two",
+      title: "Android Ride-Share App",
       description: "Description for project two.",
       image: "path/to/image2.jpg",
-      tags: ["Node.js", "Express"],
+      tags: ["Java", "Android Studio", "Mobile Dev", "Firebase"],
       demoLink: "#",
-      githubUrl: "#",
+      githubUrl: "#GitHubPrivate",
    },
    {
       id: 3,

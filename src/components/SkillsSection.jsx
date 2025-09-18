@@ -3,33 +3,47 @@ import { cn } from "@/lib/utils";
 
 const skills = [
    //Frontend
-   {name: 'HTML', level: 95, category: 'frontend'},
-   {name: 'CSS', level: 90, category: 'frontend'},
+   {name: 'HTML', level: 70, category: 'frontend'},
+   {name: 'CSS', level: 70, category: 'frontend'},
    {name: 'JavaScript', level: 85, category: 'frontend'},
-   {name: 'React', level: 80, category: 'frontend'},
-   {name: 'Tailwind CSS', level: 75, category: 'frontend'},
+   {name: 'React', level: 85, category: 'frontend'},
+   {name: 'Tailwind CSS', level: 65, category: 'frontend'},
 
    //Backend
-   {name: 'Node.js', level: 85, category: 'backend'},
+   {name: 'Node.js', level: 80, category: 'backend'},
+   {name: 'SQL', level: 90, category: 'backend'},
+   {name: 'RESTful APIs', level: 90, category: 'backend'},
+
 
    //Tools
-   {name: 'Git', level: 90, category: 'tools'},
-   {name: 'Docker', level: 70, category: 'tools'},
-   {name: 'VS Code', level: 60, category: 'tools'},
-   {name: 'IntelliJ', level: 60, category: 'tools'},
+   {name: 'Git/GitHub', level: 90, category: 'tools'},
+   {name: 'Docker', level: 82, category: 'tools'},
+   {name: 'VS Code', level: 95, category: 'tools'},
+   {name: 'IntelliJ', level: 95, category: 'tools'},
+   {name: 'Windows Office', level: 90, category: 'tools'},
+   {name: 'MacOS', level: 80, category: 'tools'},
+   {name: 'LaTeX', level: 70, category: 'tools'},
+   {name: 'Unity', level: 70, category: 'tools'},
+   {name: 'Cisco Packet Tracer', level: 80, category: 'tools'},
+
 
    //Languages
-   {name: 'JavaScript', level: 90, category: 'languages'},
+   {name: 'Java', level: 95, category: 'languages'},
+   {name: 'JavaScript', level: 85, category: 'languages'},
    {name: 'Python', level: 80, category: 'languages'},
-   {name: 'Java', level: 70, category: 'languages'},
-   {name: 'C#', level: 60, category: 'languages'},
+   {name: 'C#', level: 75, category: 'languages'},
+   {name: 'C++', level: 50, category: 'languages'},
+   {name: 'C', level: 70, category: 'languages'},
+
    
    //Design
-   {name: 'Canva', level: 80, category: 'design'}, 
-   {name: 'Figma', level: 70, category: 'design'},
+   {name: 'Canva', level: 95, category: 'design'}, 
+   {name: 'Figma', level: 75, category: 'design'},
+   {name: 'Davinci Resolve', level: 77, category: 'design'},
+
 ];
 
-const categories = ["all", "frontend", "backend", "tools", "languages", "design"];
+const categories = ["all", "languages", "frontend", "backend", "design", "tools"];
 
 
 
