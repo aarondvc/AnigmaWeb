@@ -1,6 +1,11 @@
+import { ThemeToggle } from "../components/ThemeToggle";
+
 export const GitHubPrivate = () => {
    return(
       <section className="h-screen flex flex-col items-center justify-center text-center">
+         <div className="absolute top-6 right-6">
+                 <ThemeToggle />
+         </div>
          <h1 className="text-4xl font-bold mb-4">🚫 Private Repository</h1>
          <p className="text-muted-foreground mb-6">
             Sorry, this project is currently private.  
