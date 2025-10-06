@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
-export const StarBackground = () => {
+export const SkyBackground = () => {
   const [stars, setStars] = useState([]);
   const [meteors, setMeteors] = useState([]);
-  const [clouds, setClouds] = useState([]); // <-- should be array, not undefined
+  const [clouds, setClouds] = useState([]); 
 
   useEffect(() => {
     generateStars();
@@ -70,9 +70,9 @@ export const StarBackground = () => {
   const randomCloud = (id) => ({
     id,
     spawnId: Math.random(),
-    top: Math.random() * 60, // random vertical placement
+    top: Math.random() * 80, // random vertical placement
     size: 120 + Math.random() * 100, // varied width
-    duration: 40 + Math.random() * 30, // slower drift
+    duration: 20 + Math.random() * 20, // slower drift
   });
 
   const handleCloudEnd = (id) => {

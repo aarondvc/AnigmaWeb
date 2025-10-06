@@ -156,10 +156,7 @@
 }
 
 @utility meteor {
-  @apply absolute rounded-full;
-  background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--primary)) 30%, transparent);
-  box-shadow: 0 0 10px 2px hsl(var(--primary) / 0.3);
-  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 /* Dark Mode Override */
