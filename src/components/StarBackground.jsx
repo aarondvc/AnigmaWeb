@@ -1,32 +1,30 @@
 import { useEffect, useState } from "react";
 
-// id, size, x, y, opacity, animationDuration
-// id, size, x, y, delay, animationDuration
-
 export const StarBackground = () => {
   const [stars, setStars] = useState([]);
   const [meteors, setMeteors] = useState([]);
+  const [clouds, setClouds] = useState([]); // <-- should be array, not undefined
 
   useEffect(() => {
     generateStars();
     generateMeteors();
+    generateClouds();
 
     const handleResize = () => {
       generateStars();
     };
 
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // 🌌 Stars
   const generateStars = () => {
     const numberOfStars = Math.floor(
       (window.innerWidth * window.innerHeight) / 10000
     );
 
     const newStars = [];
-
     for (let i = 0; i < numberOfStars; i++) {
       newStars.push({
         id: i,
@@ -37,39 +35,55 @@ export const StarBackground = () => {
         animationDuration: Math.random() * 4 + 2,
       });
     }
-
     setStars(newStars);
   };
 
+  // ☄️ Meteors
   const generateMeteors = () => {
-    const numberOfMeteors = 5;
-    const newMeteors = [];
-
-    for (let i = 0; i < numberOfMeteors; i++) {
-      newMeteors.push(randomMeteor(i));
-    }
-
-    setMeteors(newMeteors);
+    const numberOfMeteors = 5; 
+    const newMeteors = []; 
+    for (let i = 0; i < numberOfMeteors; i++) { newMeteors.push(randomMeteor(i)); } setMeteors(newMeteors);
   };
 
   const randomMeteor = (id) => ({
-        id,
-        spawnId: Math.random(),
-        size: Math.random() * 1 + 1,
-        x: Math.random() * 100,
-        y: Math.random() * 20,
-        delay: Math.random() * 15,
-        animationDuration: Math.random() * 3 + 3,
-      });
+    id,
+    spawnId: Math.random(),
+    size: Math.random() * 1 + 1,
+    x: Math.random() * 100,
+    y: Math.random() * 20,
+    delay: Math.random() * 15,
+    animationDuration: Math.random() * 3 + 3,
+  });
 
-   const handleMeteorEnd = (id) => {
+  const handleMeteorEnd = (id) => {
     setMeteors((prev) =>
       prev.map((m) => (m.id === id ? randomMeteor(id) : m))
     );
   };
 
+  // ☁️ Clouds
+  const generateClouds = () => {
+    const numberOfClouds = 6;
+    setClouds(Array.from({ length: numberOfClouds }, (_, i) => randomCloud(i)));
+  };
+
+  const randomCloud = (id) => ({
+    id,
+    spawnId: Math.random(),
+    top: Math.random() * 60, // random vertical placement
+    size: 120 + Math.random() * 100, // varied width
+    duration: 40 + Math.random() * 30, // slower drift
+  });
+
+  const handleCloudEnd = (id) => {
+    setClouds((prev) =>
+      prev.map((c) => (c.id === id ? randomCloud(id) : c))
+    );
+  };
+
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+      {/* ⭐ Stars */}
       {stars.map((star) => (
         <div
           key={star.id}
@@ -85,6 +99,7 @@ export const StarBackground = () => {
         />
       ))}
 
+      {/* ☄️ Meteors */}
       {meteors.map((meteor) => (
         <div
           key={meteor.id + "-" + meteor.spawnId}
@@ -94,13 +109,41 @@ export const StarBackground = () => {
             height: meteor.size * 2 + "px",
             left: meteor.x + "%",
             top: meteor.y + "%",
-            animationDelay: meteor.delay,
+            animationDelay: meteor.delay + "s",
             animationDuration: meteor.animationDuration + "s",
             position: "absolute",
-            opacity: 0, 
           }}
           onAnimationEnd={() => handleMeteorEnd(meteor.id)}
         />
+      ))}
+
+      {/* ☁️ Clouds */}
+      {clouds.map((cloud) => (
+        <div
+          key={cloud.id + "-" + cloud.spawnId}
+          className="cloud"
+          style={{
+            top: `${cloud.top}%`,
+            width: `${cloud.size}px`,
+            height: `${cloud.size * 0.6}px`,
+            animationDuration: `${cloud.duration}s`,
+          }}
+          onAnimationEnd={() => handleCloudEnd(cloud.id)}
+        >
+          {/* Extra random wisps */}
+          {[...Array(3)].map((_, i) => (
+            <span
+              key={i}
+              className="puff"
+              style={{
+                width: `${20 + Math.random() * 40}px`,
+                height: `${20 + Math.random() * 30}px`,
+                left: `${-10 + Math.random() * 120}%`,
+                top: `${-20 + Math.random() * 60}%`,
+              }}
+            />
+          ))}
+        </div>
       ))}
     </div>
   );

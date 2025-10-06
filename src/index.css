@@ -152,16 +152,14 @@
 
 /* Light mode space */
 @utility star {
-  @apply absolute rounded-full;
-  background: hsl(var(--primary));
-  box-shadow: 0 0 10px 2px hsl(var(--primary) / 0.6);
+  opacity: 0;
 }
 
 @utility meteor {
   @apply absolute rounded-full;
   background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--primary)) 30%, transparent);
-  box-shadow: 0 0 15px 5px hsl(var(--primary) / 0.5);
-  animation-fill-mode: backwards;
+  box-shadow: 0 0 10px 2px hsl(var(--primary) / 0.3);
+  animation-fill-mode: forwards;
 }
 
 /* Dark Mode Override */
@@ -174,6 +172,72 @@
   @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full; 
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3); 
   animation-fill-mode: backwards;
+}
+
+/* Default Clouds (Light Mode) */
+.cloud {
+  position: absolute;
+  left: -250px; /* start off-screen */
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.9) 70%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  border-radius: 50%;
+  opacity: 0.8;
+  filter: blur(8px); /* softer edges */
+  animation: drift linear forwards;
+}
+
+/* Layer multiple puff elements */
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: inherit;
+  border-radius: 50%;
+  opacity: 0.8;
+  filter: blur(6px);
+}
+
+/* One puff on the left */
+.cloud::before {
+  width: 80%;
+  height: 80%;
+  left: -60%;
+  top: -20%;
+}
+
+/* One puff on the right */
+.cloud::after {
+  width: 90%;
+  height: 90%;
+  left: 70%;
+  top: -30%;
+}
+
+/* Extra wispy randomness */
+.cloud .puff {
+  position: absolute;
+  background: inherit;
+  border-radius: 50%;
+  opacity: 0.8;
+  filter: blur(12px);
+}
+
+/* Drift animation */
+@keyframes drift {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(110vw);
+  }
+}
+
+/* Dark Mode → Hide Clouds */
+.dark .cloud {
+  opacity: 0;
 }
 
 #root {
