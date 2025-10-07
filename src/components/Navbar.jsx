@@ -9,7 +9,7 @@ const navItems = [
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
-  { name: "Designs", href: "#"}
+  { name: "Designs", href: "designs"}
 ];
 
 export const Navbar = () => {

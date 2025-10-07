@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { NotFound } from "./pages/NotFound";
 import { GitHubPrivate } from "./pages/GitHubPrivate";
+import { Designs } from "./pages/Designs";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
     <Routes>
       <Route index element = {<Home />}/>
       <Route path="private-repo" element = {<GitHubPrivate />}/>
+      <Route path="designs" element = {<Designs />}/>
       <Route path="*" element={<NotFound />}/>
     </Routes>
     </BrowserRouter>
