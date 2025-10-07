@@ -1,17 +1,20 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useEffect } from "react";
 
 const designs = {
   templates: [
     {
       id: 1,
       title: "Business Card Template",
+      description: "A professional, minimalist business card design featuring clean typography and a modern layout.", // NEW
       img: "/designs/business-card-thumb.jpg",
       pdf: "/designs/business-card.pdf",
     },
     {
       id: 2,
       title: "Poster Template",
+      description: "A vibrant, eye-catching poster template perfect for events or product launches.", // NEW
       img: "/designs/poster-thumb.jpg",
       pdf: "/designs/poster.pdf",
     },
@@ -20,18 +23,36 @@ const designs = {
     {
       id: 3,
       title: "Custom Flyer (Watermarked)",
+      description: "Client work: Custom-designed flyer for a local business promotion. Focus on brand identity.", // NEW
       img: "/designs/custom-flyer-watermarked.jpg",
     },
     {
       id: 4,
       title: "Custom Banner (Watermarked)",
+      description: "Client work: A digital banner designed for social media advertising, optimized for high click-through rates.", // NEW
       img: "/designs/custom-banner-watermarked.jpg",
     },
   ],
 };
 
+// Utility to prevent body scrolling when modal is open
+const useScrollLock = (isLocked) => {
+  useEffect(() => {
+    if (isLocked) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isLocked]);
+};
+
+
 export const DesignsSection = () => {
   const [selected, setSelected] = useState(null);
+  useScrollLock(!!selected); // Lock scroll when a design is selected
 
   return (
     <section
@@ -49,7 +70,8 @@ export const DesignsSection = () => {
           Designs
         </motion.h2>
 
-        {/* Templates Section */}
+        {/* Template and Customer sections (content remains the same) */}
+        {/* ... (Your existing Templates Section) ... */}
         <div className="mb-16">
           <h3 className="text-2xl font-semibold mb-6 text-primary">
             Templates
@@ -77,8 +99,7 @@ export const DesignsSection = () => {
             ))}
           </div>
         </div>
-
-        {/* Customer Section */}
+        {/* ... (Your existing Customer Work Section) ... */}
         <div>
           <h3 className="text-2xl font-semibold mb-6 text-primary">
             Customer Work (Watermarked)
@@ -106,9 +127,10 @@ export const DesignsSection = () => {
             ))}
           </div>
         </div>
+
       </div>
 
-      {/* Modal */}
+      {/* Modal - Enhanced Structure */}
       <AnimatePresence>
         {selected && (
           <motion.div
@@ -116,45 +138,66 @@ export const DesignsSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
             onClick={() => setSelected(null)}
           >
             <motion.div
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.9 }}
+              initial={{ scale: 0.9, y: 50 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 50 }}
               transition={{ duration: 0.2 }}
-              className="relative bg-white/10 dark:bg-black/50 border border-white/20 rounded-2xl p-6 max-w-3xl w-[90%] shadow-[0_0_25px_rgba(255,255,255,0.1)]"
+              // MODAL STYLING: Changed size to allow better mobile viewing
+              className="relative bg-card rounded-2xl p-6 max-w-4xl w-full mx-auto shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Close */}
+              {/* Close Button */}
               <button
                 onClick={() => setSelected(null)}
-                className="absolute top-3 right-4 text-2xl text-white/70 hover:text-white transition"
+                className="absolute top-4 right-4 text-3xl font-light text-foreground/70 hover:text-primary transition z-10"
+                aria-label="Close"
               >
-                ✕
+                &times;
               </button>
 
-              {/* Image */}
-              <img
-                src={selected.img}
-                alt={selected.title}
-                className="w-full rounded-lg mb-6"
-              />
+              {/* Modal Content */}
+              <div className="grid md:grid-cols-2 gap-6 items-start">
+                {/* Image (Left) */}
+                <div className="rounded-xl overflow-hidden shadow-lg border border-border/50">
+                    <img
+                        src={selected.img}
+                        alt={selected.title}
+                        className="w-full h-auto"
+                    />
+                </div>
 
-              {/* Footer */}
-              <div className="flex justify-between items-center">
-                <h4 className="text-xl font-semibold">{selected.title}</h4>
-                {selected.pdf && (
-                  <a
-                    href={selected.pdf}
-                    download
-                    className="px-4 py-2 rounded-lg bg-primary text-white hover:bg-primary/80 transition-all"
-                  >
-                    Download PDF
-                  </a>
-                )}
+                {/* Details (Right) */}
+                <div className="text-left space-y-4">
+                    <h4 className="text-3xl font-bold text-foreground">{selected.title}</h4>
+                    
+                    {/* New Description */}
+                    <p className="text-muted-foreground text-lg border-b border-border pb-4">
+                        {selected.description}
+                    </p>
+
+                    {/* Download Button */}
+                    <div className="pt-4">
+                        {selected.pdf ? (
+                          <a
+                            href={selected.pdf}
+                            download
+                            className="cosmic-button flex items-center justify-center gap-2"
+                          >
+                            Download PDF
+                          </a>
+                        ) : (
+                          <p className="text-sm text-gray-500 italic">
+                            Client work is watermarked and not available for download.
+                          </p>
+                        )}
+                    </div>
+                </div>
               </div>
+
             </motion.div>
           </motion.div>
         )}

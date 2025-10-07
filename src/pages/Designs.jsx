@@ -1,6 +1,7 @@
 import { DesignNavbar } from "../components/DesignNavbar";
 import { DesignsSection } from "../components/DesignsSection";
 import { SkyBackground } from "../components/SkyBackground";
+import { ContactSection } from "../components/ContactSection";
 
 export const Designs = () => {
    return(
@@ -8,6 +9,7 @@ export const Designs = () => {
          <SkyBackground />
          <DesignNavbar />
          <DesignsSection />
+         <ContactSection />
       </div>
    );
 };

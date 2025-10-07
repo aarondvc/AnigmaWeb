@@ -2,7 +2,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ExternalLink, Github, X } from "lucide-react";
 
-
 const projects = [
    {
       id: 1,
@@ -50,7 +49,7 @@ export const ProjectsSection = () => {
                Each project includes a brief description, technologies used, and links to live demos or GitHub repositories.
             </p>
        
-               {/* Project Grid */}
+               
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <motion.div
@@ -115,12 +114,12 @@ export const ProjectsSection = () => {
             </div>
          </div>
 
-         {/* Modal Preview */}
+         
       <AnimatePresence>
         {selected && (
           <motion.div
             key="overlay"
-            className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50"
+            className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -128,7 +127,7 @@ export const ProjectsSection = () => {
           >
             <motion.div
               key="modal"
-              className="bg-white dark:bg-gray-900 rounded-xl shadow-2xl max-w-3xl w-full p-6 relative mx-4"
+              className="bg-card text-foreground rounded-xl shadow-2xl max-w-3xl w-full p-6 relative mx-auto"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
@@ -136,7 +135,7 @@ export const ProjectsSection = () => {
               onClick={(e) => e.stopPropagation()}
             >
               <button
-                className="absolute top-3 right-3 text-gray-600 dark:text-gray-300 hover:text-primary transition"
+                className="absolute top-3 right-3 text-foreground/70 hover:text-primary transition"
                 onClick={() => setSelected(null)}
               >
                 <X size={22} />
@@ -165,7 +164,7 @@ export const ProjectsSection = () => {
                   <a
                     href={selected.demoLink}
                     target="_blank"
-                    className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition"
+                    className="cosmic-button px-4 py-2 text-sm"
                   >
                     View Demo
                   </a>
@@ -173,7 +172,7 @@ export const ProjectsSection = () => {
                 <a
                   href={selected.githubUrl}
                   target="_blank"
-                  className="px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/80 transition"
+                  className="px-4 py-2 text-sm rounded-lg border border-border bg-transparent text-foreground hover:bg-border transition"
                 >
                   View Code
                 </a>
