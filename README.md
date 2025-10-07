@@ -25,6 +25,7 @@ This project was inspired and adapted from open-source resources and tutorials t
 
 Beautiful React Tailwind Portfolio
  – base structure and design inspiration.
+ - https://github.com/machadop1407/beautiful-react-tailwind-portfolio
 
 Machadop1407’s (PedroTech) YouTube Tutorial
  – walkthrough that guided parts of the setup and UI implementation.
