@@ -16,7 +16,7 @@ const projects = [
    {
       id: 2,
       title: "Android Ride-Share App",
-      description: "Ride-Share is an Android application enabling users to post and request rides, featuring a point-based reward system and a dual confirmation mechanism for ride verification. Collaborated in a three-person development team, managing data persistence through SQLite and implementing core user stories including trip validation, profile creation, and transaction tracking. Optimized ride listings to display only active trips, improving UI clarity and reducing on-screen clutter by 33%, while ensuring secure and reliable backend communication between passengers and drivers.",
+      description: "Ride-Share was an Android application enabling users to post and request rides, featuring a point-based reward system and a dual confirmation mechanism for ride verification. Collaborated in a three-person development team, managing data persistence through SQLite and implementing core user stories including trip validation, profile creation, and transaction tracking. Optimized ride listings to display only active trips, improving UI clarity and reducing on-screen clutter by 33%, while ensuring secure and reliable backend communication between passengers and drivers.",
       image: "/projects/RideShareHomePic.png",
       tags: ["Java", "Android Studio", "Firebase", "Mobile Dev"],
       demoLink: "#",
@@ -25,7 +25,7 @@ const projects = [
    {
       id: 3,
       title: "Portfolio Website",
-      description: "AnigmaDev is a responsive portfolio website to showcase personal projects, technical skills, and professional experience. Built using ReactJS with Tailwind CSS for modular design and Framer Motion for interactive animations. Implemented a dark/light mode toggle, dynamic navigation bar, and smooth page transitions for an intuitive user experience. Deployed on Vercel with optimized loading performance and accessibility standards, the site serves as a central hub for my work, integrating GitHub repositories, project demos, and a downloadable resume.",
+      description: "AnigmaDev is a responsive portfolio website to showcase personal projects, technical skills, and professional experience. Built using ReactJS with Tailwind CSS for modular design and Framer Motion for interactive animations. Implemented a dark/light mode toggle, dynamic navigation bar, and smooth page transitions for an intuitive user experience. Deployed on Vercel with optimized loading performance and accessibility standards, the site serves as a central hub for my work, integrating GitHub repositories, project demos, and a downloadable resume. The website is currently in development.",
       image: "/projects/AnigmaWebHomePic.png",
       tags: ["ReactJS", "TailwindCSS", "Web Dev"],
       demoLink: "#",

@@ -1,8 +1,10 @@
+import { SkyBackground } from "../components/SkyBackground";
 import { ThemeToggle } from "../components/ThemeToggle";
 
 export const NotFound = () => {
   return (
     <section className="h-screen flex flex-col items-center justify-center text-center relative">
+      <SkyBackground />
       <div className="absolute top-6 right-6">
         <ThemeToggle />
       </div>

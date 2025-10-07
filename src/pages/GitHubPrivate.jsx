@@ -1,8 +1,10 @@
 import { ThemeToggle } from "../components/ThemeToggle";
+import { SkyBackground } from "../components/SkyBackground";
 
 export const GitHubPrivate = () => {
    return(
       <section className="h-screen flex flex-col items-center justify-center text-center">
+         <SkyBackground />
          <div className="absolute top-6 right-6">
                  <ThemeToggle />
          </div>
