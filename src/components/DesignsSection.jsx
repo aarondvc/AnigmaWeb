@@ -44,7 +44,7 @@ export const DesignsSection = () => {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-bold mb-12 text-glow drop-shadow-[0_0_15px_rgba(120,120,255,0.3)]"
+          className="text-4xl font-bold mb-12 drop-shadow-[0_0_15px_rgba(120,120,255,0.3)]"
         >
           Designs
         </motion.h2>

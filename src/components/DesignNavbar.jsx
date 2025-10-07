@@ -15,7 +15,7 @@ export const DesignNavbar = () => {
         href="/#hero"
         className="flex items-center text-xl font-bold text-primary space-x-1"
       >
-        <span className="text-glow text-foreground relative z-10">
+        <span className="text-foreground relative z-10">
           AnigmaDev
         </span>
         <span className="opacity-80">Portfolio</span>
