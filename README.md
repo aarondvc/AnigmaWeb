@@ -28,6 +28,7 @@ Beautiful React Tailwind Portfolio
 
 Machadop1407’s (PedroTech) YouTube Tutorial
  – walkthrough that guided parts of the setup and UI implementation.
+ - https://youtu.be/ifOJ0R5UQOc?si=yyaiVnnvn-6BHk-1
 
 Additional tweaks, animations (meteors, stars), and sections were customized and extended by me.
 
