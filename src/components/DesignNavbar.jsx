@@ -31,11 +31,11 @@ export const DesignNavbar = () => {
       <div className="container flex items-center justify-between relative">
         {/* Logo */}
         <a
-          href="#hero"
+          href="/#hero"
           className="flex items-center text-xl font-bold text-primary"
         >
           <span className="text-foreground relative z-10">
-            AnigmaDev
+            AnigmaDesigns
           </span>
           <span>Portfolio</span>
         </a>

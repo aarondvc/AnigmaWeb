@@ -74,11 +74,9 @@ export const ContactSection = () => {
               Contact Information
             </h3>
 
-            {/* Change 'flex-items-center' to 'items-center' for vertical centering */}
-            <div className="space-y-6 flex flex-col md:items-start items-center ml-5">
+            <div className="space-y-10 flex flex-col md:items-start items-center ml-5">
               
               {/* Email */}
-              {/* ALIGNMENT FIX: Changed items-start to items-center */}
               <div className="flex items-center space-x-4"> 
                 <div className="p-3 rounded-full bg-primary/10">
                   <Mail className="h-6 w-6 text-primary" />
