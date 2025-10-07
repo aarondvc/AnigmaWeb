@@ -3,7 +3,6 @@ import { Home } from "./pages/Home";
 import { NotFound } from "./pages/NotFound";
 import { GitHubPrivate } from "./pages/GitHubPrivate";
 import { Designs } from "./pages/Designs";
-import { Analytics } from "@vercel/analytics/next"
 
 function App() {
   return (
